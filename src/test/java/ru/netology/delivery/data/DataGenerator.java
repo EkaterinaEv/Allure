@@ -14,7 +14,7 @@ public class DataGenerator {
     public static LocalDate generateDate(int shift) {
         LocalDate date = LocalDate.now();
         return date;
-    }git 
+    }
 
     public static String generateCity(String locale) {
         Faker faker = new Faker(new Locale("ru"));
@@ -24,7 +24,7 @@ public class DataGenerator {
 
     public static String generateName(String locale) {
         Faker faker = new Faker(new Locale("ru"));
-        String name= String.valueOf(faker.name());
+        String name = String.valueOf(faker.name());
         return name;
     }
 
@@ -39,12 +39,12 @@ public class DataGenerator {
         }
 
         public static UserInfo generateUser(String locale) {
-            Faker faker = new Faker(new Locale("ru"));
-            return user(
-                    generateCity(locale),
-                    generateName(locale),
-                    generatePhone(locale)
-            );
+            UserInfo user = new UserInfo();
+            user.getClass(generateCity());
+            user.name;
+            user.phone;
+
+            return user;
         }
     }
 
