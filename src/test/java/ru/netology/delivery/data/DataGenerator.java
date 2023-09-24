@@ -5,18 +5,16 @@ import lombok.Value;
 import lombok.val;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.Locale;
-import java.util.Random;
 
 public class DataGenerator {
     private DataGenerator() {
     }
 
-    public static String generateDate(int shift, String pattern) {
-        return LocalDate.now().plusDays(shift).format(DateTimeFormatter.ofPattern(pattern));
+    public static LocalDate generateDate(int shift) {
+        LocalDate date = LocalDate.now();
         return date;
-    }
+    }git 
 
     public static String generateCity(String locale) {
         Faker faker = new Faker(new Locale("ru"));
