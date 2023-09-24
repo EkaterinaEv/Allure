@@ -5,7 +5,9 @@ import lombok.Value;
 import lombok.val;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Locale;
+import java.util.Random;
 
 public class DataGenerator {
     private DataGenerator() {
@@ -17,8 +19,16 @@ public class DataGenerator {
     }
 
     public static String generateCity(String locale) {
-        Faker faker = new Faker(new Locale("ru"));
-        String city = faker.address().city();
+        Random random = new Random();
+        String[] city = {"Архангельск","Астрахань","Белгород","Брянск", "Владимир",
+                "Волгоград", "Вологда", "Воронеж", "Мелитополь", "Иваново", "Иркутск",
+                "Калининград", "Калуга", "Кемерово", "Киров", "Кострома", "Курган", "Курск",
+                "Липецк", "Магадан", "Мурманск","Нижний Новгород",
+                "Великий Новгород", "Новосибирск","Омск", "Оренбург","Орёл","Пенза","Псков",
+                "Ростов-на-Дону","Рязань","Самара","Саратов","Южно-Сахалинск","Екатеринбург","Смоленск","Тамбов",
+                "Тверь","Томск","Тула","Тюмень","Ульяновск","Херсон","Челябинск","Ярославль","Москва",
+                "Санкт-Петербург","Севастополь","Биробиджан","Нарьян-Мар","Ханты-Мансийск","Анадырь","Салехард"};
+
         return city;
     }
 
@@ -54,4 +64,6 @@ public class DataGenerator {
         String name;
         String phone;
     }
+
+
 }
