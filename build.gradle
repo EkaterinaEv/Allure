@@ -19,7 +19,6 @@ dependencies {
     testImplementation 'com.codeborne:selenide:6.18.0'
     testImplementation 'com.github.javafaker:javafaker:1.0.2'
     testImplementation 'org.projectlombok:lombok:1.18.28'
-
 }
 
 test {

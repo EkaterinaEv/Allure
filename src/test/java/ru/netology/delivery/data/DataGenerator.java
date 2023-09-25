@@ -19,8 +19,8 @@ public class DataGenerator {
     }
 
     public static String generateCity(String locale) {
-        Random random = new Random();
-        String[] city = {"Архангельск","Астрахань","Белгород","Брянск", "Владимир",
+
+        String[] city= new String[]{"Архангельск","Астрахань","Белгород","Брянск", "Владимир",
                 "Волгоград", "Вологда", "Воронеж", "Мелитополь", "Иваново", "Иркутск",
                 "Калининград", "Калуга", "Кемерово", "Киров", "Кострома", "Курган", "Курск",
                 "Липецк", "Магадан", "Мурманск","Нижний Новгород",
@@ -28,8 +28,8 @@ public class DataGenerator {
                 "Ростов-на-Дону","Рязань","Самара","Саратов","Южно-Сахалинск","Екатеринбург","Смоленск","Тамбов",
                 "Тверь","Томск","Тула","Тюмень","Ульяновск","Херсон","Челябинск","Ярославль","Москва",
                 "Санкт-Петербург","Севастополь","Биробиджан","Нарьян-Мар","Ханты-Мансийск","Анадырь","Салехард"};
-
-        return city;
+        Random rand = new Random();
+            return city [rand.nextInt(city.length)];
     }
 
     public static String generateName(String locale) {
@@ -50,9 +50,7 @@ public class DataGenerator {
 
         public static UserInfo generateUser(String locale) {
             UserInfo user = new UserInfo();
-            user.getClass(generateCity());
-            user.name;
-            user.phone;
+
 
             return user;
         }
